@@ -1,0 +1,18 @@
+for creating model
+sequelize model:generate --name Post --attributes title:string , content:text , imageUrl:string , categoryId:integer, userId:integer 
+or 
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+for migration
+you need to change the name of database cofig/config.json
+under develoipment section change the name what you want but first create  that database inphpmyadmin or any other mysql software
+
+seeds in node js
+npx sequelize-cli seed:generate --name category-seeder
+npx sequelize-cli  db:seed --seed 20250212062445-category-seeder.js
+npx sequelize-cli  db:seed:undo:all for undo data for all seeds in database as well
+npx sequelize-cli  db:seed:undo --seed 20250212062445-category-seeder.js for specific file
+
+association 
+npx sequelize model:generate --name Post --attributes title:string , content:text , imageUrl:string , categoryId:integer, userId:integer 
+
+
