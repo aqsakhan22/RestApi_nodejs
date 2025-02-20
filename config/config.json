@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "nodemysql",
-    "host": "127.0.0.1",
+    "username": "admin",
+    "password": "aqsakhan1234",
+    "database": "nodejsdb",
+    "host": "nodejsdb.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
