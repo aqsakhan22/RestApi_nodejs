@@ -2,9 +2,11 @@
   "development": {
     "username": "admin",
     "password": "aqsakhan1234",
-    "database": "nodejsdb",
-    "host": "nodejsdb.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "database": "db",
+    "host": "db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port":3306,
+
   },
   "test": {
     "username": "root",
@@ -16,8 +18,9 @@
   "production": {
     "username": "admin",
     "password": "aqsakhan1234",
-    "database": "nodejsdb",
-    "host": "nodejsdb.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "database": "db",
+    "host": "db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port":3306
   }
 }
