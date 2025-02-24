@@ -1,4 +1,4 @@
-const sequelize = require('./sequelize'); // Import the Sequelize instance
+const sequelize = require('./config/database'); // Import the Sequelize instance
 //const User = require('./models/User'); // Import the User model
 
 // Synchronize all models with the database
