@@ -2,7 +2,7 @@
   "development": {
     "username": "admin",
     "password": "aqsakhan1234",
-    "database": "mydb6",
+    "database": "nodeDB",
     "host": "db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql",
     "port":3306
@@ -18,7 +18,7 @@
   "production": {
     "username": "admin",
     "password": "aqsakhan1234",
-    "database": "mydb7",
+    "database": "nodeDB",
     "host": "db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql",
     "port":3306
