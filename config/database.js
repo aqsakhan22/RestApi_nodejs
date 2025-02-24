@@ -1,10 +1,10 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 const sequelize = new Sequelize({
-  database: 'your_database_name', // Replace with your RDS database name
-  username: 'your_username',      // Replace with your RDS master username
-  password: 'your_password',      // Replace with your RDS master password
-  host: 'your_rds_endpoint',      // Replace with your RDS endpoint
+  database: 'db', // Replace with your RDS database name
+  username: 'admin',      // Replace with your RDS master username
+  password: 'aqsakhan1234',      // Replace with your RDS master password
+  host: 'db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com',      // Replace with your RDS endpoint
   port: 3306,                     // Default MySQL port
   dialect: 'mysql',                // Specify the dialect (MySQL)
   dialectModule: require('mysql2'), // Use mysql2 as the dialect module

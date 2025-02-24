@@ -5,7 +5,7 @@
     "database": "db",
     "host": "db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql",
-    "port":3306,
+    "port":3306
 
   },
   "test": {
