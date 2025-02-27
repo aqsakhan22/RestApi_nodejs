@@ -1,4 +1,7 @@
 const sequelize = require('./config/database');
+require('dotenv').config();
+
+console.log(`environmentData is env ${process.env.DB_HOST} ${process.env.DB_USER}`);
 
 async function testConnection() {
   console.log("testConnection");
