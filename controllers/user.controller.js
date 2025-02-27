@@ -3,7 +3,7 @@ const bcryptjs= require('bcryptjs');
 const jwt= require('jsonwebtoken');
 
 function signUp(req,res){
-console.log(`signup user data is ${req.body.email} `);
+//console.log(`signup user data is ${req.body.email} `);
 models.User.findOne({where:{email:req.body.email}}).then(
     result =>{
  if(result){
@@ -43,8 +43,8 @@ bcryptjs.genSalt(10,function(err,salt){
  }
     }
 ).catch(error =>{
-    console.log('signup screen error is ')
-    console.log(error);
+    //console.log('signup screen error is ')
+    //console.log(error);
     res.status(500).json({
         message:"Something went wrong"
     });

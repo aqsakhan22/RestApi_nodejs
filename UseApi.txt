@@ -1,0 +1,9 @@
+SignUp
+localhost:3024/user/signUp
+
+{
+     "name":"aqsaarif",
+ "email":"ak123@gmail.com",
+  "password":"aqsakhan1234"
+}
+localhost:3024/user/login
