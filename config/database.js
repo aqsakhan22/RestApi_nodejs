@@ -1,6 +1,7 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
+console.log(`environmentData is ${process.env.DB_HOST} ${process.env.DB_USER}`);
 const sequelize = new Sequelize({
   database: process.env.DB_NAME, // Replace with your RDS database name
   username: process.env.DB_USER,      // Replace with your RDS master username
