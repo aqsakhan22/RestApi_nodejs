@@ -1,3 +1,8 @@
+sequelize initialization steps
+mkdir config
+touch config/config.json
+copy paste  sampleconfig file
+npx sequelize-cli init
 for creating model
 sequelize model:generate --name Post --attributes title:string , content:text , imageUrl:string , categoryId:integer, userId:integer 
 or 

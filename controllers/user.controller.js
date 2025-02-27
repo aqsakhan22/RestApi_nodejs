@@ -23,13 +23,13 @@ bcryptjs.genSalt(10,function(err,salt){
             password:hash
         };
         models.User.create(user).then(result =>{
-        
+            // console.log(`token is ${result}`);
             res.status(201).json({
                message:"User Crerated Successfully",
                user:result
             });
        }).catch(error =>{
-           console.log(error);
+//console.log(error);
            res.status(500).json({
                message:"Something went wrong"
            });

@@ -1,18 +1,19 @@
+
 {
   "development": {
-    "username": "admin",
-    "password": "aqsakhan1234",
-    "database": "nodeDB",
-    "host": "db.clzrdwstoy7i.ap-south-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "",
+    "database": "nodemysql",
+    "host": "localhost",
     "dialect": "mysql",
     "port":3306
 
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "password": "",
+    "database": "nodemysql",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "production": {
