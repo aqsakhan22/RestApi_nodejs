@@ -1,9 +1,16 @@
 SignUp
-localhost:3024/user/signUp
+1. localhost:3024/user/signUp
 
 {
      "name":"aqsaarif",
  "email":"ak123@gmail.com",
   "password":"aqsakhan1234"
 }
-localhost:3024/user/login
+2. localhost:3024/user/login
+{
+     "name":"aqsaarif",
+ "email":"ak123@gmail.com",
+  "password":"aqsakhan1234"
+}
+token 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFrMTA4N0BnbWFpbC5jb20iLCJ1c2VySWQiOjcsImlhdCI6MTc0MDY0NDYzM30.0ui9yQkh0q-J0gPRzLG0-bsVGN2TLB3vjWDTjT0Zl8Q
