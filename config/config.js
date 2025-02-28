@@ -1,7 +1,8 @@
 // config.js
 require('dotenv').config();
 
-const env = process.env.NODE_ENV || 'dev';
+// const env = process.env.NODE_ENV || 'development';
+const env =  'production';
 console.log(`ENV DETAILS is ${process.env.NODE_ENV}`);
 const development = {
   username: process.env.DB_DEVELOPMENT_USER,
