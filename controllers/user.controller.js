@@ -3,6 +3,7 @@ const bcryptjs= require('bcryptjs');
 const jwt= require('jsonwebtoken');
 
 function signUp(req,res){
+    //console.log(`email is ${req.body.email}`);
 //console.log(`signup user data is ${req.body.email} `);
 models.User.findOne({where:{email:req.body.email}}).then(
     result =>{

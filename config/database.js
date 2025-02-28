@@ -11,10 +11,10 @@ const sequelize = new Sequelize({
   dialect: 'mysql',                // Specify the dialect (MySQL)
   dialectModule: require('mysql2'),
   dialectOptions: { //< Add this
-    ssl: {
-       require: true,
-       rejectUnauthorized: false
-    }
+    // ssl: {
+    //    require: true,
+    //    rejectUnauthorized: false
+    // }
  }, // Use mysql2 as the dialect module
   logging: console.log,            // Enable logging (optional)
   pool: {
