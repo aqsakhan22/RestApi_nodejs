@@ -1,7 +1,10 @@
-const sequelize = require('./config/database');
-require('dotenv').config();
+//
+//const sequelize = require('./config/database');
+const sequelize = require('./sequelize');
 
-console.log(`removing environment Data is env ${process.env.DB_HOST} ${process.env.DB_USER}`);
+//require('dotenv').config();
+
+//console.log(`removing environment Data is env ${process.env.DB_HOST} ${process.env.DB_USER} ${process.env.DB_NAME}`);
 
 async function testConnection() {
   console.log("testConnection");

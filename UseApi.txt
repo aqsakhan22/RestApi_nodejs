@@ -1,3 +1,6 @@
+"start": "NODE_ENV=production node server.js",
+"dev": "NODE_ENV=development nodemon server.js"
+
 SignUp
 1. localhost:3024/user/signUp
 
