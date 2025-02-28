@@ -1,8 +1,8 @@
 // config.js
 require('dotenv').config();
 
-const env = process.env.NODE_ENV || 'development';
-
+const env = process.env.NODE_ENV || 'dev';
+console.log(`ENV DETAILS is ${process.env.NODE_ENV}`);
 const development = {
   username: process.env.DB_DEVELOPMENT_USER,
   password: process.env.DB_DEVELOPMENT_PASSWORD,
