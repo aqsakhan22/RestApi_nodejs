@@ -85,8 +85,8 @@ models.User.findOne({where:{email:req.body.email}})
                 process.env.JWT_KEY,
                 function(err,token)
                 {
-                    console.log(`token err is ${err} ${process.env.JWT_KEY}`);
-                console.log(`jwt token is EMAIL ${user.email} ID ${user.id} TOKEN ${token}`);
+                    //console.log(`token err is ${err} ${process.env.JWT_KEY}`);
+                //console.log(`jwt token is EMAIL ${user.email} ID ${user.id} TOKEN ${token}`);
                    res.status(200).json(
                     {
                     message:'Autientication successfull',
