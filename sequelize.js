@@ -1,7 +1,8 @@
 // sequelize.js
 const { Sequelize } = require('sequelize');
-const config = require('./config/config.js');
+const config = require('./config/config.json');
 
+console.log(`username ${config.username} ${config.database} ${config.password}`);
 const sequelize = new Sequelize(
   config.database,
   config.username,
@@ -9,7 +10,7 @@ const sequelize = new Sequelize(
   {
     host: config.host,
     port: config.port,
-    dialect: config.dialect,
+    dialect: "mysql",
     logging: false, // Disable logging for cleaner output
   }
 );

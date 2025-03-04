@@ -1,44 +1,31 @@
-// models/index.js
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const config = require('../config/config.js'); // Import the config.js file
-const basename = path.basename(__filename);
-const db = {};
+const env = process.env.NODE_ENV || 'development';
+const config = require('../config/config.js')[env]; // Import config
+//console(`database is  ${config.username}`);
+ // Set environment
+// const dbConfig = config[env] || config.default; // Use the correct config
+// console.log(`environment is env ${config[env]} ${env} ${dbConfig}`);
 
-// Create a Sequelize instance using the configuration from config.js
+console.log(`env config is ${config.username}`);
 const sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
-  {
-    host: config.host,
-    port: config.port,
-    dialect: config.dialect,
-    logging: false, // Disable logging for cleaner output
-  }
-);
+  config.database, 
+  config.username, 
+  config.password, {
+  host: config.host,
+  dialect: config.dialect
+});
 
-// Load all models dynamically
+const db = {};
 fs.readdirSync(__dirname)
-  .filter((file) => {
-    return (
-      file.indexOf('.') !== 0 &&
-      file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
-    );
-  })
-  .forEach((file) => {
-    const model = require(path.join(__dirname, file))(
-      sequelize,
-      Sequelize.DataTypes
-    );
+  .filter(file => file !== 'index.js')
+  .forEach(file => {
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
 
-// Associate models if associations are defined
-Object.keys(db).forEach((modelName) => {
+Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
   }

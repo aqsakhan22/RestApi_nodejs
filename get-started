@@ -20,4 +20,15 @@ npx sequelize-cli  db:seed:undo --seed 20250212062445-category-seeder.js for spe
 association 
 npx sequelize model:generate --name Post --attributes title:string , content:text , imageUrl:string , categoryId:integer, userId:integer 
 
+config.js and config.json both are different file  changes will be apply in models/index.js I created both files for .js and .json sampleindex.js sampleindexjson
+ 
+ how to use env variable 
+  $env:NODE_ENV="development"
+  ||
+  $env:NODE_ENV="production"
+  node server.js
+  for aws EC2 instance
+    export NODE_ENV=production
+    export NODE_ENV=development
+  
 

@@ -109,6 +109,7 @@ models.Post.findAll().then(
         }
     }
 ).catch(error=>{
+    console.log(`POST ERR IS ${error}`);
     res.status(500).json({
         'message':'Something went wrong'
     });
