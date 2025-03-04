@@ -8,7 +8,7 @@ const config = require('../config/config.js')[env]; // Import config
 // const dbConfig = config[env] || config.default; // Use the correct config
 // console.log(`environment is env ${config[env]} ${env} ${dbConfig}`);
 
-console.log(`env config is ${config.username}`);
+//console.log(`env config is ${config.username}`);
 const sequelize = new Sequelize(
   config.database, 
   config.username, 

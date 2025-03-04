@@ -1,6 +1,7 @@
 const models= require('../models');
 const bcryptjs= require('bcryptjs');
 const jwt= require('jsonwebtoken');
+require("dotenv").config();
 
 function signUp(req,res){
     //console.log(`email is ${req.body.email}`);
@@ -75,7 +76,8 @@ models.User.findOne({where:{email:req.body.email}})
         else{
      bcryptjs.compare(req.body.password,user.password,function(err,result){
         if(result){
-            const token= jwt.sign(
+            console.log(`JWT is ${user.id} ${user.email}`);
+            const token= jwt.sign( 
                 {
                     email: user.email,
                     userId:user.id
@@ -83,6 +85,7 @@ models.User.findOne({where:{email:req.body.email}})
                 process.env.JWT_KEY,
                 function(err,token)
                 {
+                    console.log(`token err is ${err} ${process.env.JWT_KEY}`);
                 console.log(`jwt token is EMAIL ${user.email} ID ${user.id} TOKEN ${token}`);
                    res.status(200).json(
                     {

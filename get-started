@@ -30,5 +30,9 @@ config.js and config.json both are different file  changes will be apply in mode
   for aws EC2 instance
     export NODE_ENV=production
     export NODE_ENV=development
-  
+    Need a Permanent Solution? 🔄
+    If you need a more permanent way to keep your Node.js API running even after reboots, consider using:
+    
+    PM2: npm install -g pm2 → then run pm2 start server.js
+    Systemd: Create a service to auto-start your API on reboot.  
 
