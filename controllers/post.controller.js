@@ -9,7 +9,8 @@ const post = {
     categoryId:req.body.category_id ,
     userId:req.userData.userId
 };
-//console.log(post);
+console.log('POST CREATED');
+console.log(post);
 const schema={
 title:{type:"string",optional:false,max:"100"},
 content:{type:"string",optional:false,max:"500"},
