@@ -1,4 +1,5 @@
 // route regrading post
+// All Controller define here
 const express=require('express');
 const postcontroller=require('../controllers/post.controller');
 const router=express.Router();

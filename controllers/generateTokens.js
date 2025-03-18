@@ -8,6 +8,6 @@ function generateTokens(user) {
 
     // Store the refresh token in the database or in-memory store
     refreshTokens[refreshToken] = user.id;
-
+      // Tokenization Task in Node js
     return { accessToken, refreshToken };
 }

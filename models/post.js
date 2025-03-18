@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       //belongsTo : One-to-One or Many-to-One relationship. Foreign key is in the source model.
-      Post.belongsTo(models.User);
+      Post.belongsTo(models.User); //  THIS IS MANY TO ONE RELATIONSHIP
       // many to many
       // belongsToMany -> Many-to-Many relationship. Requires a join table\
       // through is use for connecting model to post  like connecting PostCategory to post

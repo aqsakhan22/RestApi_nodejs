@@ -28,7 +28,7 @@ bcryptjs.genSalt(10,function(err,salt){
         models.User.create(user).then(result =>{
             // console.log(`token is ${result}`);
             res.status(201).json({
-               message:"User Crerated Successfully",
+               message:"User Created Successfully",
                user:result
             });
        }).catch(error =>{
@@ -68,7 +68,7 @@ bcryptjs.genSalt(10,function(err,salt){
 function login(req,res){
  
 
-    
+
 models.User.findOne({where:{email:req.body.email}})
     .then(user=>{
         //const expiresIn = 7 * 24 * 60 * 60; 
@@ -181,8 +181,6 @@ function logout(req,res){
     });
 
 }
-
-
 
 module.exports= {
     signUp:signUp,

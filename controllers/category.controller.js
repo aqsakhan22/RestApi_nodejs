@@ -1,6 +1,5 @@
 const models=require('../models');
 
-
 // this is for gettting all post
 function index(req,res){
     console.log("ALL Category");
@@ -15,6 +14,7 @@ models.Category.findAll().then(
             });
         }
     }
+    
 ).catch(error=>{
     console.log(`Category ERR IS ${error}`);
     res.status(500).json({
@@ -62,8 +62,6 @@ models.Category.findOne({where:{name:req.body.title}}).then(result =>{
 
 
 };
-
-
 
 module.exports={
 

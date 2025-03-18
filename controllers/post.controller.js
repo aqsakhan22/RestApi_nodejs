@@ -9,8 +9,8 @@ const post = {
     categoryId:req.body.category_id ,
     userId:req.userData.userId
 };
-console.log('POST CREATED');
-console.log(post);
+//console.log('POST CREATED');
+//console.log(`post is created`);
 const schema={
 title:{type:"string",optional:false,max:"100"},
 content:{type:"string",optional:false,max:"500"},
@@ -183,14 +183,13 @@ res.status(200).json({
 function deletePost(req,res){
     const id=req.params.id;
     const userId=req.userData.userId;
-
     models.Post.destroy({where:{id:id,userId,userId}}).then(result=>{
         console.log(`result is ${result}`);
         if(result != 0){
          
             res.status(200).json({
                 'message':"Post Deleted Successfully",
-                 post:result
+               //  post:result
                });
         }
         else{
