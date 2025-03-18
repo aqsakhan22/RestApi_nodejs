@@ -128,6 +128,62 @@ models.User.findOne({where:{email:req.body.email}})
 
 }
 
+function index(req,res){
+    //console.log("ALL POST");
+models.User.findAll().then(
+    result =>{
+        if(result != null){
+            res.status(200).json(result);
+        }
+        else{
+            res.status(500).json({
+                'message':'User Not Found'
+            });
+        }
+    }
+).catch(error=>{
+    console.log(`User ERR IS ${error}`);
+    res.status(500).json({
+        'message':'Something went wrong'
+    });
+});
+ 
+}
+
+function show(req,res){
+console.log("show users");
+const id=req.params.id;
+
+models.User.findByPk(id,
+    {
+        include:[models.Address]
+    }
+).then(
+    // this post belongs to which category
+    result => {
+        console.log(`result is ${result}`);
+        if(result){
+            res.status(200).json(result);
+        }
+        else{
+            res.status(404).json({
+                'message':'User Not Found'
+            });
+        }
+     
+
+    }
+).catch(error => {
+   console.log(`err is ${error}`);
+    res.status(500).json(
+        {
+            message:'Something going wrong'
+        }
+    );
+}); //find by primary key
+
+};
+
 
 function generateTokens(user) {
     const accessToken = jwt.sign({ userId: user.id }, process.env.JWT_KEY, { expiresIn: '15m' });
@@ -184,5 +240,7 @@ function logout(req,res){
 
 module.exports= {
     signUp:signUp,
-    login:login
+    login:login,
+    index:index,
+    show:show
 }
