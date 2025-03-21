@@ -59,7 +59,6 @@ models.Category.findByPk(req.body.category_id)
 
 };
 
-
 function show(req,res){
 
 const id=req.params.id;
